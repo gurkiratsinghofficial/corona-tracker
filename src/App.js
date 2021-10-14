@@ -33,9 +33,9 @@ function App() {
     axios
     .all([
     axios.get("https://disease.sh/v2/all"),
-    axios.get("https://api.covid19india.org/data.json"),
+    axios.get("https://data.covid19india.org/data.json"),
     axios.get("https://disease.sh/v2/countries/india"),
-    axios.get("https://api.covid19india.org/state_district_wise.json")
+    axios.get("https://data.covid19india.org/state_district_wise.json")
     ])
         .then(responseArr=>{
           setLatest(responseArr[0].data)
